@@ -1,0 +1,22 @@
+name: ShellCheck Analysis
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 07 * * MON"
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: src/main.sh
+        env:
+          SHELLCHECK_OPTS: --shell bash
