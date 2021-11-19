@@ -20,4 +20,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run CLI
-        run: ${{ matrix.shell }} climax.sh
+        run: ${{ matrix.shell }} src/main.sh
