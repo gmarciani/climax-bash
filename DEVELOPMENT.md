@@ -21,5 +21,5 @@ pre-commit run --all-files
 ## ShellCheck
 Run ShellCheck analysis:
 ```
-shellcheck src/main.sh --shell bash
+shellcheck src/**/*.sh --shell bash
 ```
