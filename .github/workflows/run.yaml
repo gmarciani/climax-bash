@@ -19,10 +19,5 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python }}
-
       - name: Run CLI
         run: ${{ matrix.shell }} climax.sh
